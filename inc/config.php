@@ -1,41 +1,41 @@
 <?php
 	// TWEET NEST
 	// Config file
-	
+
 	// Change all of these variables as you see fit, to match your likings!
 	// Please note: If there's '' around values, don't remove them. If there aren't, don't add any! :)
-
+	require_once(dirname(__FILE__) . "/../.config");
 	$config = array(
 		// REQUIRED VALUES ------------------------------------
-		'consumer_key'       => '', // Your Twitter app consumer key
-		'consumer_secret'    => '', // Your Twitter app consumer secret
-		'twitter_screenname' => '', // Twitter screen name of the one whose tweets are being recorded
-		'your_tw_screenname' => '', // Your Twitter screen name -- the one we log in as. Usually the same as above, but does not have to be.
-		'twitter_token'      => '', // Twitter OAuth access token (usually filled in automatically)
-		'twitter_token_secr' => '', // Twitter OAuth access token secret (usually filled in automatically)
-		'timezone'           => '', // Choose one of these: http://php.net/manual/en/timezones.php
+		'consumer_key'       => TWITTER_CONSUMER_KEY, // Your Twitter app consumer key
+		'consumer_secret'    => TWITTER_CONSUMER_SECRET, // Your Twitter app consumer secret
+		'twitter_screenname' => TWITTER_SCREENNAME, // Twitter screen name of the one whose tweets are being recorded
+		'your_tw_screenname' => TWITTER_SCREENNAME, // Your Twitter screen name -- the one we log in as. Usually the same as above, but does not have to be.
+		'twitter_token'      => TWITTER_OAUTH_TOKEN, // Twitter OAuth access token (usually filled in automatically)
+		'twitter_token_secr' => TWITTER_OAUTH_TOKEN_SECRET, // Twitter OAuth access token secret (usually filled in automatically)
+		'timezone'           => "Europe/London", // Choose one of these: http://php.net/manual/en/timezones.php
 		'path'               => '', // Where's your twitter installation on your domain? No end slash, please.
 		// Database values
 		'db'                 => array(
-			'hostname'       => '', // The hostname of your database server. Usually 'localhost'
-			'username'       => '', // The username to log in to your database
-			'password'       => '', // The password to log in to your database
-			'database'       => '', // The database name
-			'table_prefix'   => '', // The prefix to table names in the database
+			'hostname'       => DB_HOSTNAME, // The hostname of your database server. Usually 'localhost'
+			'username'       => DB_USERNAME, // The username to log in to your database
+			'password'       => DB_PASSWORD, // The password to log in to your database
+			'database'       => DB_DATABASE, // The database name
+			'table_prefix'   => DB_TBPREFIX, // The prefix to table names in the database
 			'charset'	 => ''  // The charset of your database
 		),
-		
+
 		// OPTIONAL -------------------------------------------
 		// If you want to access your maintenance PHP files by HTTP, specify an admin password.
-		'maintenance_http_password' => '', 
+		'maintenance_http_password' => MAINTENANCE_PASSWORD,
 		// UNLESS YOU HAVE SSL, IT WILL BE SENT IN CLEAR TEXT, SO MAYBE NOT YOUR TWITTER (or anything else) PASSWORD!
-		
-		'follow_me_button'   => true, // Display 'follow me' button?
-		'smartypants'        => true, // Use SmartyPants to perfect punctuation inside tweets?
-		'https_strict'       => false, // Disable inline images for HTTP-only image hosters?
-		
+
+		'follow_me_button'   => false, // Display 'follow me' button?
+		'smartypants'        => false, // Use SmartyPants to perfect punctuation inside tweets?
+		'https_strict'       => yes, // Disable inline images for HTTP-only image hosters?
+
 		'css' => 'styles/streamlined/styles.css.php', // What CSS file should we use?
-		
+
 		'style' => array(
 			// Style
 			// You can use color values below like in a CSS file; #xxx, rgb(xx,xx,xx), whatever you want.
