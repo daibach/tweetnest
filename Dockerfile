@@ -11,7 +11,7 @@ COPY styles /var/www/html/styles
 COPY authorize.php /var/www/html
 COPY callback.php /var/www/html
 COPY day.php /var/www/html
-COPY favourites.php /var/www/html
+COPY favorites.php /var/www/html
 COPY index.php /var/www/html
 COPY month.php /var/www/html
 COPY redirect.php /var/www/html
